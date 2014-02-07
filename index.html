@@ -45,7 +45,17 @@
 <script>
 	(function ( $ ){
 
-	
+	function clock()
+	{
+		var now=new Date();
+		var YYYY=now.getUTCFullYear();
+		var MM=now.getUTCMonth()+1;
+		var DD=now.getUTCDate();
+		var hh=today.getUTCHours();
+		var mm=today.getUTCMinutes();
+		var ss=today.getUTCSeconds();
+		t=setTimeout(function(){startTime()},500);
+	}
 	})( jQuery );
 </script>
 </body>
