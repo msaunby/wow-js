@@ -88,12 +88,17 @@
 		var now=new Date();
 		var YYYY=now.getUTCFullYear();
 		var MM=now.getUTCMonth()+1;
+		MM=MM < 10 ? "0"+MM : MM;
 		var DD=now.getUTCDate();
+		DD=DD < 10 ? "0"+DD : DD;
 		var hh=now.getUTCHours();
+		hh=hh < 10 ? "0"+hh : hh;
 		var mm=now.getUTCMinutes();
+		mm=mm < 10 ? "0"+mm : mm;
 		var ss=now.getUTCSeconds();
+		ss=ss < 10 ? "0"+ss : ss;
 		t=setTimeout(function(){clock()},500);
-		$('#timeInput').val('hello');
+		$('#timeInput').val(""+YYYY+"-"+MM+"-"+DD+" "+hh+":"+mm+":"+ss);
 	}
 	clock();
 	})( jQuery );
