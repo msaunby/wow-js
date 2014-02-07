@@ -92,9 +92,10 @@
 		var hh=today.getUTCHours();
 		var mm=today.getUTCMinutes();
 		var ss=today.getUTCSeconds();
-		t=setTimeout(function(){startTime()},500);
+		t=setTimeout(function(){clock()},500);
 		$('#timeInput').val('hello');
 	}
+	clock();
 	})( jQuery );
 </script>
     
