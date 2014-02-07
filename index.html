@@ -89,9 +89,9 @@
 		var YYYY=now.getUTCFullYear();
 		var MM=now.getUTCMonth()+1;
 		var DD=now.getUTCDate();
-		var hh=today.getUTCHours();
-		var mm=today.getUTCMinutes();
-		var ss=today.getUTCSeconds();
+		var hh=now.getUTCHours();
+		var mm=now.getUTCMinutes();
+		var ss=now.getUTCSeconds();
 		t=setTimeout(function(){clock()},500);
 		$('#timeInput').val('hello');
 	}
