@@ -103,7 +103,7 @@
 	clock();
 	
 	var wow = {url:'http://wow.metoffice.gov.uk/automaticreading',type:'GET',
-	done:function(data){alert(data);},fail:function(data){console.dir(data);},always:function(data){;}}
+	done:function(data){alert(data);},fail:function(data){console.log(data);},always:function(data){;}}
 	$('#check').click(function(){
 		$.ajax({
                 url: wow.url,
@@ -115,7 +115,7 @@
                     'tempf':'0'
                 },
                 crossDomain: true,
-                dataType: "json"
+                dataType: "text"
             }).done(wow.done).fail(wow.fail).always(wow.always);});
 	
 	})( jQuery );
