@@ -108,14 +108,11 @@
 		$.ajax({
                 url: wow.url,
                 type: wow.type,
-                headers: {
+                data: {
                     'siteAuthenticationKey': $('#keyInput').val(),
                     'sideid':$('#idInput').val(),
                     'dateutc':$('#timeInput').val(),
                     'tempf':'0'
-                },
-                data: {
-                	
                 },
                 crossDomain: true,
                 dataType: "json"
