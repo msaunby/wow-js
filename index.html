@@ -102,8 +102,7 @@
 	}
 	clock();
 	
-	var wow = {url_:'http://pxtrax.appspot.com/hello',url:'http://wow.metoffice.gov.uk/automaticreading',type:'GET',
-	done:function(data){alert(data);} };
+	var wow = {url_:'http://pxtrax.appspot.com/hello',url:'http://wow.metoffice.gov.uk/automaticreading',type:'GET' };
 	
 	$('#check').click(function(){
 		$.ajax({
@@ -116,7 +115,7 @@
                     'tempf':'70'
                 },
                 crossDomain: true,
-                dataType: "text"}).done(wow.done(data)).fail( function(req,msg,err){console.log(req);console.log(msg);console.log(err)} ); 
+                dataType: "text"}).done(function(){alert('ok';)}).fail( function(req,msg,err){console.log(req);console.log(msg);console.log(err)} ); 
         });
 	
 	})( jQuery );
