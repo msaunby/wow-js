@@ -40,7 +40,7 @@
 					<span class="prefix">API Key</span>
 				</div>
 				<div class="small-9 columns">
-					<input type="text" placeholder="API Key" id="apiKeyInput">
+					<input type="text" placeholder="API Key" id="keyInput">
 				</div>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 					<span class="prefix">Timestamp</span>
 				</div>
 				<div class="small-9 columns">
-					<input type="text" placeholder="ID" id="timeInput">
+					<input type="text" placeholder="date time" id="timeInput">
 				</div>
 			</div>
 		</div>
@@ -102,7 +102,25 @@
 	}
 	clock();
 	
-	$('#check').click(function(){alert('you clicked?')});
+	var wow = {url:'http://wow.metoffice.gov.uk/automaticreading',type:'GET',
+	done:function(data){alert(data);},fail:function(data){alert(data);},always:function(data){;}}
+	$('#check').click(function(){
+		$.ajax({
+                url: wow.url,
+                type: wow.type,
+                headers: {
+                    'siteAuthenticationKey': $('#keyInput').val(),
+                    'sideid':$('#idInput').val(),
+                    'dateutc':$('#timeInput').val(),
+                    'tempf':'0'
+                },
+                data: {
+                	
+                },
+                crossDomain: true,
+                dataType: "json",
+                cache: cacheRequest
+            }).done(wow.done).fail(wow.fail).always(wow.always);});
 	
 	})( jQuery );
 </script>
