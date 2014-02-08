@@ -106,8 +106,6 @@
 	done:function(data){alert(data);} };
 	
 	$('#check').click(function(){
-		console.log(wow);
-		
 		$.ajax({
                 url: wow.url,
                 type: wow.type,
@@ -118,7 +116,7 @@
                     'tempf':'0'
                 },
                 crossDomain: true,
-                dataType: "text"}).done(wow.done).fail( function(req,msg,err){console.log(msg);console.log(err)} ); 
+                dataType: "text"}).done(wow.done).fail( function(req,msg,err){console.log(req);console.log(msg);console.log(err)} ); 
         });
 	
 	})( jQuery );
