@@ -103,7 +103,8 @@
 	clock();
 	
 	var wow = {url:'http://wow.metoffice.gov.uk/automaticreading',type:'GET',
-	done:function(data){alert(data);} }
+	done:function(data){alert(data);} };
+	
 	$('#check').click(function(){
 		$.ajax({
                 url: wow.url,
